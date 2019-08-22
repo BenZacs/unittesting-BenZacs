@@ -23,10 +23,8 @@ Write a table describing your test cases.
 | init function test     | correct data        |
 | str function test      | correct output      |
 | fraction + fraction    | Return the sum of two fractions as a new fraction. |
-| fraction - fraction    | Return the minus of two fractions as a new fraction. |
+| fraction - fraction    | Return the difference of two fractions as a new fraction. |
 | fraction * fraction    | Return the multiply of two fractions as a new fraction. |
 | fraction > fraction    | Return the comparing between two fractions as boolean. |
-| negative               | Return the negative value of fraction.|
-| equal                  | Two fractions are equal if they have the same value.
-           Fractions are stored in proper form so the internal representation
-           is unique|
+| negative               | Return the negative value of fraction. |
+| equal                  | Two fractions are equal if they have the same value. |
