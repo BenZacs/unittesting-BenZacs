@@ -16,6 +16,8 @@ def unique(list):
     []
     >>> unique(["s",2,2,5,"s","b","s","b",5,5,3])
     ['s', 2, 5, 'b', 3]
+    >>> unique([1,2,3,4,5,6,7,8,9,0])
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
     """
     new_list = []
     for element in list:
