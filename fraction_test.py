@@ -90,7 +90,7 @@ class FractionTest(unittest.TestCase):
         self.assertFalse(c.__gt__(b))
         self.assertTrue(a.__gt__(c))
         self.assertTrue(b.__gt__(a))
-        self.assertFalse(d.__gt__(b))
+        self.assertTrue(math.isnan(d > b))
 
     def test_neg(self):
         self.assertEqual("-1", Fraction(1,1).__neg__())
