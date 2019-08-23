@@ -58,6 +58,8 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(Fraction(5, 6), Fraction(1, 2) + Fraction(8, 24))
         # 1 = 1/2 + -40/-80
         self.assertEqual(Fraction(1), Fraction(1, 2) + Fraction(-40, -80))
+        # nan = 0/0 + 1/2
+        self.assertTrue(math.isnan(Fraction(0, 0) + Fraction(9, 10)))
 
     def test_sub(self):
         # 1/2 = 3/4 - 2/8
@@ -66,6 +68,8 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(Fraction(5, 8), Fraction(12, 16) - Fraction(4, 32))
         # -91/144 = 5/16 - 17/18
         self.assertEqual(Fraction(-91, 144), Fraction(5, 16) - Fraction(17, 18))
+        # nan = 2/0 - 4/7
+        self.assertTrue(math.isnan(Fraction(2, 0) - Fraction(4, 7)))
 
     def test_mul(self):
         # 1/4 = 1/2 * 1/2
@@ -74,21 +78,26 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(Fraction(5, 24), Fraction(5, 8) * Fraction(1, 3))
         # 36/37 = -1 * -36/37
         self.assertEqual(Fraction(36, 37), Fraction(-1) * Fraction(-36, 37))
+        # nan = 3/6 * -1/0
+        self.assertTrue(math.isnan(Fraction(3, 6) * Fraction(-1, 0)))
 
     def test_gt(self):
         a = Fraction(1, 2)
         b = Fraction(5, 6)
         c = Fraction(1, 9)
+        d = Fraction(0, 0)
         self.assertFalse(a.__gt__(b))
         self.assertFalse(c.__gt__(b))
         self.assertTrue(a.__gt__(c))
         self.assertTrue(b.__gt__(a))
+        self.assertFalse(d.__gt__(b))
 
     def test_neg(self):
         self.assertEqual("-1", Fraction(1,1).__neg__())
         self.assertEqual("-3/5", Fraction(9, 15).__neg__())
         self.assertEqual("0", Fraction(0).__neg__())
         self.assertEqual("2/3",Fraction(-2, 3).__neg__())
+        self.assertTrue(math.isnan(Fraction(0, 0).__neg__()))
 
     def test_eq(self):
         f = Fraction(1,2)
