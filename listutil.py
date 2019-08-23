@@ -18,12 +18,15 @@ def unique(list):
     ['s', 2, 5, 'b', 3]
     >>> unique([1,2,3,4,5,6,7,8,9,0])
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    >>> unique([1,1,1,[1,2,3],2,2])
+    [1, [1, 2, 3], 2]
     """
     new_list = []
     for element in list:
         if element not in new_list:
             new_list.append(element)
     return new_list
+
 
 if __name__ == "__main__":
     """Run the doctests in all methods."""
