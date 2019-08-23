@@ -20,6 +20,10 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(5, f.denominator)
         f = Fraction(5, -7)
         self.assertEqual(7, f.denominator)
+        f = Fraction(1, 0)
+        self.assertEqual(0, f.denominator)
+        f = Fraction(0,0)
+        self.assertEqual(0, f.numerator)
 
     def test_str(self):
         f = Fraction(3, -1)
@@ -39,6 +43,10 @@ class FractionTest(unittest.TestCase):
         # Constructor should provide default denominator = 1
         f = Fraction(99)
         self.assertEqual("99", f.__str__())
+        f = Fraction(9, 0)
+        self.assertEqual("9/0", f.__str__())
+        f = Fraction(0, 0)
+        self.assertEqual("0/0", f.__str__())
 
     # TODO Write tests for __init__, __eq__, +, *.
     # Here is an example, but you must add more test cases.  
