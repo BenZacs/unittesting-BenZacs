@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/BenZacs/unittesting-BenZacs.svg?branch=master)](https://travis-ci.com/BenZacs/unittesting-BenZacs)
+
 ## Unit Testing Assignment
 
 by Kasidit Wongpaiboon.
