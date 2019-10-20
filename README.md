@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/BenZacs/unittesting-BenZacs.svg?branch=master)](https://travis-ci.com/BenZacs/unittesting-BenZacs)
-[![codecov](https://codecov.io/gh/BenZacs/unittesting-BenZacs/branch/master/graph/badge.svg)]
+[![codecov](https://codecov.io/gh/BenZacs/unittesting-BenZacs/branch/master/graph/badge.svg)](https://codecov.io/gh/BenZacs/unittesting-BenZacs)
 
 ## Unit Testing Assignment
 
