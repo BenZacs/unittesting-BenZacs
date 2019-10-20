@@ -112,3 +112,6 @@ class FractionTest(unittest.TestCase):
         self.assertFalse(i.__eq__(f))
         j = Fraction(1, 0)  # ZeroDivisionError: division by zero
         self.assertFalse(j.__eq__(i))
+
+if __name__ == '__main__':
+     unittest.main(verbosity=2)
